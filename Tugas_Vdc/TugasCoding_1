@@ -1,0 +1,884 @@
+class person {
+
+}
+
+var person = person();
+
+person person2 = person();
+
+class person {
+  
+  String name ="Guest";
+  String? address;
+  final String country = "indonesia";
+
+}
+
+var person = person();
+person.name = "Eko Kurniawan";
+person.address = "Subang";
+// person.country = "Tidak Bisa Diubah";
+
+print(person.name);
+print(person.address);
+print(person.country);
+
+class Person {
+
+    String name = "Guest";
+    String? address;
+    final String country = "Indonesia";
+
+    void sayHello(String paramName) {
+      print("Hello $paramName, my name is $name");
+
+    }
+
+    var person = Person();
+    person.name = "Eko Kurniawan";
+
+    person.sayHello("Budi");
+
+class Computer {
+
+  void startup() => print("computer is starting up");
+
+  void shutdown() => print("computer is shutting down");
+
+  String getOperatingSystem() => "Linux";
+
+}
+
+void main(){
+  
+  var computer = Computer();
+  computer.startup();
+  computer.shutdown();
+  print(computer.getOperatingSystem());
+
+}
+
+extension GoodByePerson on Person {
+
+  void sayGoodBye(String paramname){
+    print("Good Bye $paramname, from $name");
+
+  }
+
+}
+
+void main() {
+  
+  var person = Person();
+  person.name = "Eko";
+  person.sayGoodBye("Budi");
+
+}
+
+class Orange {
+  int quantity = 0;
+ 
+  Orange operator +(Orange orange) {
+    var result = Orange();
+    result.quantity = quantity + orange.quantity;
+    return result;
+
+  }
+}
+
+void main() {
+  var orange1 = Orange();
+  orange1.quantity = 10;
+
+  var orange2 = Orange();
+  orange2.quantity = 10;
+
+  var orange3 = orange1 + orange2;
+  print(orange3.quantity);
+}
+
+class Person {
+  
+  String name = "Guest";
+  String? address;
+  final String country = "Indonesia";
+
+  Person(String paramName, String paramNameAddress) {
+    name = paramName;
+    address = paramNameAddress;
+
+  }
+
+  void sayHello(String paramName) {
+    print("Hello $paramName, My Name is $name");
+
+  }
+
+var person = Person("Eko Kurniawan", "Subang");
+
+person.name = "Eko Kurniawan";
+person.sayHello("Budi");
+
+class Person {
+  String name = "Guest";
+  String? address;
+  final String country = "Indonesia";
+
+  Person(String name, String address) {
+    name = name; // field name tidak berubah
+    address = address; // field address tidak berubah
+  }
+
+}
+
+class Person {
+  String name = "Guest";
+  String? address;
+  final String country = "Indonesia";
+
+  Person(String name, String address){
+    this.name = name;
+    this.address = address;
+  }
+
+}
+
+class Person {
+  String name = "Guest";
+  String? address;
+  final String country = "Indonesia";
+ 
+  Person(this.name, this.address);
+  
+  }
+
+  Person(this.name, this.address){
+
+  }
+
+  Person.withName(this.name){
+
+  }
+
+  Person.withAddress(this.address){
+
+  }
+
+  var person = Person.withName("Eko Kurniawan");
+  var person2 = Person.withAddress("Subang");
+  var person3 = Person("Eko Kurniawan", "Jakarta");
+
+  Person(this.name, this.address){
+
+  }
+  Person.withName(String name) : this(name, "");
+  
+  Person.withAddress(String address) : this("", address);
+
+  Person.withJakarta() : this.withAddress("Jakarta");
+
+class Customer {
+  String firstName = '';
+  String lastName = '';
+  String fullName = '';
+
+  Customer(this.firstName, this.lastName, this.fullName);
+      firstName = fullName.split(" ")[0];
+      lastName = fullName.split(" ")[1];
+    print('Creator Customer');
+  }
+
+class ImmutablePoint {
+  final int x;
+  final int y;
+
+  const ImmutablePoint(this.x, this.y);
+} 
+
+void main() {
+  var point1 = ImmutablePoint(10, 10);
+  var point2 = ImmutablePoint(10, 10);
+
+  print(point1 == point2);
+
+}
+
+class Database {
+  Database() {
+    print('Create new Database');
+  }
+
+  static final database = Database ();
+  
+  factory Database.get() {
+    return database;
+  }
+}
+
+void main(){
+
+  var database1 = Database.get();
+  var database2 = Database.get();
+  
+  print(database1 == database2);
+
+}
+
+class User {
+  String? Username;
+  String? name;
+  String? email;
+}
+
+void main() {
+  var user = User();
+  user.username = "eko";
+  user.name = "Eko Kurniawan";
+  user.email = "eko@example.com";
+}
+
+void main() {
+  var user = User();
+  ..user.username = "eko";
+  ..user.name = "Eko Kurniawan";
+  ..user.email = "eko@example.com";
+}
+
+User createUser() {
+  return null;
+}
+
+void main () {
+  User? user = createUser()
+    ?..username = "eko"
+    ..name = "Eko Kurniawan"
+    ..email = "eko@example.com";
+    
+}
+
+class Manager {
+  String? name;
+  
+  void sayHello(String name){
+    print('Hello $name, my name is ${this.name}');
+  }
+}
+
+class VicePresident extends Manager {
+
+}
+
+void main(){
+  var Manager = Manager();
+  Manager.name = 'Eko';
+  manager.sayHello('Budi');
+
+  var vp = VicePresident();
+  vp.name = 'Kurniawan';
+  vp.sayHello('Budi');
+
+}
+
+class Manager {
+  
+  String? name;
+  
+  void sayHello(String name){
+    print('Hellp $name, my nmae is Manager ${this.name}');
+  }
+
+}
+
+class VicePresident extends Manager {
+  voidsayHello(String name){
+    
+  }
+
+}
+
+void main(){
+  var manager = Manager();
+  manager.name = "Budi";
+  manager.sayHello('Joko');
+
+  var vp = VicePresident();
+  vp.name = "Eko";
+  vp.sayHello('Joko');
+}
+
+class Person {
+  String name = "Person";
+
+  void sayHello(String name) {
+    print('Hello ${name}, my name is ${this.name}');
+  } 
+}  
+
+class OtherPerson extends Person {
+  String name = "Other Persen";
+}
+
+void main(){
+  var person = OtherPerson();
+  person.sayHello("Eko");
+}
+
+class Shape {
+  int getCorner() {
+    return 0;
+  }
+}
+
+class Rectangle extends Shape {
+  int getCorner() {
+
+  }
+  
+  int getParenCorner(){
+
+  }
+}
+
+void main(){
+  var rectangle = Rectangle();
+
+  print(rectangle.getCorner());
+  print(rectangle.getParenCorner());
+}
+
+class Manager {
+  String? name;
+
+  Manager(String name){
+    this.name = name;
+  }
+
+}
+
+class VicePresident extends Manager {
+
+  VicePresident(String name) : super(name){
+
+  }
+
+}
+
+void main(){
+  var manager = Manager("Eko");
+  manager.sayHello('Budi');
+
+  var vp = VicePresident("Kurniawan");
+  vp.sayHello('Budi');
+
+}
+
+class Persen {}
+
+void main() {
+  var number = 100;
+  print(number.toString());
+
+  var person = Person();
+  print(person.toString());
+}
+
+class EmpLoyee {
+  String? name;
+  
+  EmpLoyee(this.name);
+}
+
+class Manager extends EmpLoyee {
+  Manager(String name) : super(name);
+}
+
+class VicePresident extends Manager {
+  VicePresident(String name) : super(name);
+}
+
+void main() {
+
+  EmpLoyee empLoyee = EmpLoyee("Eko");
+  print(empLoyee.name);
+
+  empLoyee = Manager("Eko");
+  print(empLoyee.name);
+
+  empLoyee = VicePresident("Eko");
+  print(empLoyee.name);
+
+}
+
+void sayHello(EmpLoyee empLoyee) {
+  print("Hello ${empLoyee.name}");
+}
+
+void main() {
+  sayHello(EmpLoyee("Eko"));
+  sayHello(Manager("Eko"));
+  sayHello(VicePresident("Eko"));
+
+}
+
+void sayHello(EmpLoyee empLoyee) {
+  if (empLoyee is VicePresident) {
+    VicePresident vicePresident = empLoyee as VicePresident;
+    print('Hello Vice President ${vicePresident.name}');
+  } else if (empLoyee is Manager) {
+    Manager manager = empLoyee as Manager;
+    print('Hello Manager ${manager.name}');
+  } else {
+    print('Hello Employee ${empLoyee.name}');
+  }
+}
+
+class Category {
+  String id = "";
+  String? name = "";
+
+  Category(this.id, this.name);
+}
+
+import 'data/category.dart';
+
+void main() {
+  var category = Category("1", "Gadget");
+
+  print(category.id);
+  print(category.name);
+}
+
+abstract class Location {
+  String? name;
+}
+
+class City extends Location {
+  City(String name) {
+    this.name = name;
+  }
+}
+
+import 'data/Location.dart';
+
+void main() {
+  var city = City("Subung");
+  var Location = Location();
+
+}
+
+abstract class Animal {
+  String? name;
+
+  void run();
+}
+
+class Cat extends Animal {
+  void run() {
+    print('Cat $name is running');
+  }
+}
+
+import 'data/animal.dart';
+
+void main = Cat();
+animal.name = "Puss";
+animal.run();
+
+class Product {
+  String? id;
+  String? name;
+  int? _quantity; // tidak bisa diakses directory
+
+  int getQuantity() {
+    return _quantity;
+  }
+}
+
+import 'data/product.dart';
+
+void main() {
+  var product Product();
+  product.id ="1";
+  product.name = "Mac Book Pro";
+  product._quantity = 100; // error
+}
+
+class Rectangle {
+  int _width = 0;
+  int _Length = 0;
+
+  int get width {
+    return _width;
+  }
+  
+  set width(int value) {
+    _width = value;
+  }
+  
+}
+
+class Rectangle {
+  int _width = 0;
+  int _Length = 0;
+  
+  int get width => _width;
+  
+  set width(int value) => _width = value;
+
+  int get length => _Length;
+  
+  set length(int value) => _Length = value;
+}
+
+class Rectangle {
+  int _width = 0;
+  int _Length =0;
+  
+  int get width => _width;
+  
+  set width(int value) {
+    if (value >= 1) {
+      _width = value;
+    }
+  }
+
+
+class Car {
+  String name = "";
+  
+  void drive() {}
+
+  int getTire() {
+    return 0;
+  }
+}
+
+class Avanza implements Car {
+  String name = "Avanza";
+
+  void drive() {
+    print('Drive Avanza');
+  }
+
+
+  int getTire() {
+    return 4;
+  }
+}
+
+abstract class HasBrand {
+  String getBrand();
+}
+
+class Avanza impLements Car, HasBrand {
+  String name = "Avanza";
+
+  String getBrand() => "Toyota";
+
+} 
+
+mixin Playable {
+  String? name;
+
+  void play() {
+    print('play $name');
+  }
+}
+
+mixin Stoppable {
+  String? name;
+
+  void stop() {
+    print('stop $name');
+  }
+}
+
+class Video with Playable, Stoppable {
+
+}
+
+class Audio with Playable, Stoppable {
+
+}
+
+abstract class Multimedia {}
+
+mixin Playable on Multimedia {
+  String? name;
+
+  void play() {
+    print('play $name');
+  }
+}
+
+class Video extends Multimedia with Playable, Stoppable {}
+
+class Audio extends Multimedia with Playable, Stoppable {}
+
+void main() {
+  var Video = Video();
+  video.play();
+
+  var audio = Audio();
+  audio.play();
+}
+
+class Person {
+  String? id;
+  String? name;
+  int? _quantity; // tidak bisa diakses diluar directory 
+
+  int? getQuantity() {
+    return _quantity;
+  }
+  
+  
+  String toString() {
+    return 'Product{id: $id, name: $name, quantity: $_quantity}';
+  }
+}
+
+import 'data/product.dart';
+
+void main(){
+  var product = Product();
+  print(product.toString());
+  print(product);
+}
+
+import 'data/category.dart';
+
+void main() {
+  
+  var category1 = Category("1", "Laptop");
+  var category2 = Category("1", "Laptop");
+
+  print(category1 == category2);
+
+}
+
+  bool operator ==(Object other){
+    if (other is Category) {
+      if (id != other.id) return false;
+      if (name != other.name) return false;
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+
+class Category {
+  String id = "";
+  String name = "";
+
+  Category(this.id, this.name);
+
+  int get hashCode {
+    var result = id.hashCode;
+    result += name.hashCode;
+    return result;
+  }
+  
+}
+
+import 'data/category.dart';
+
+void main(){
+
+  var category = Category("1", "Laptop");
+  print(category1.hashCode);
+
+  var category2 = Category("1", "Laptop");
+  print(category2.hashCode);
+
+  print(category1.hashCode == category.hashCode);
+
+}
+
+class Repository {
+
+  final String _name;
+
+  Repository(this._name);
+
+  noSuchMethod(Invocetion invocetion);
+    var column = MirrorSystem.getName(invocetion.memberName);
+    var velue = invocetion.positionaLArguments.first;
+    var sql = "select * from $_name where $column = '$value";
+    print(sql);
+  }
+
+import 'data/repository.dart';
+
+void main() {
+  dynamic repository = Repository("product");
+
+  repository.id("1234");
+}
+
+abstract class CategoryRepository {
+  void id(String id);
+
+  void name(String name);
+}
+
+class Repository extends CategoryRepository {
+  final starting _name;
+
+}
+
+import 'data/repository.dart';
+
+void main() {
+  CategoryRepository categoryRepository = Repository("category");
+  categoryRepository.id("1234");
+  categoryRepository.name("Laptop");
+
+}
+
+class Sum {
+  int firts;
+  int second;
+
+  Sum(this.first, this.second);
+
+  int call() => first + second;
+}
+
+import 'data/sum.dart';
+
+void main(){
+  var sum = Sum(10, 10);
+
+  var total = sum();
+  print(total);
+}
+
+class Sum {
+  int first;
+  int second;
+
+  Sum(this.first, this.second);
+
+  int call() => firts + second;
+}
+
+typedef Total = Sum;
+typedef Jumlah = Sum;
+
+import 'dat/sum.dart';
+
+void main(){
+  var jumlah = Jumlah(10, 10);
+  print(jumlah());
+
+  var total = Total(10, 10);
+  print(total());
+}
+
+typedef Filter = String Funcation(String);
+
+void sayHello(String name, Filter filter) {
+  print("Hello ${filter(name)}");
+}
+
+void main() {
+  sayHello('Eko', (name) => name.toUpperCase());
+}
+
+class AppLication {
+  static final String author = "Eko Kurniawan";
+  static final String name = "Belajar Pemogramanan Dart";
+}
+
+void main(){
+  print(AppLication.name);
+  print(AppLication.author);
+}
+
+class Math {
+  static int sum(int first, int second) => first + second;
+}
+
+void main(){
+  var result = Math.sum(10, 10);
+  print(result);
+}
+
+enum CustomerLevel {regular, premium, vip}
+
+class Customer {
+  String name;
+  CustomerLevel level;
+
+  Customer(this.name, this.level);
+}
+
+import 'data/customer.dart';
+
+void main() {
+  var customer = Customer("Eko, CustomerLevel.vip");
+
+  print(customer.name);
+  print(customer.level);
+
+  print(CustomerLevel.values);
+}
+
+class VaLidation {
+  static void validate(String username, String password) {
+    if (username ==""){
+      throw Exception("Username is blank");
+    } else if (password == "") {
+      throw Exception("Password is blank");
+    }
+  }
+}
+
+class VaLidationException impLements {
+  String message;
+
+  VaLidationException(this.message);
+}
+
+class VaLidation {
+  static void VaLidation(String username, String password) {
+    if (username == "") {
+      throw VaLidationException("Username is blank");
+    } else if (password == "") {
+      throw VaLidationException("Password is blank");
+    }
+  }
+}
+
+class VaLidationException impLements Exception {
+  String massage;
+
+  VaLidationException(this.massage);
+}
+
+class VaLidation {
+  static void validate(String username, String password) {
+    if (username == "") {
+      throw VaLidationException("Username is blank");
+    } else if (password == "") {
+      throw VaLidationException("Password is blank");
+    }
+  }
+}
+
+void msin() {
+  try {
+    VaLidation.validate("", "");
+  } on VaLidationException {
+    print("Validation Error");
+  }
+}
+
+void main() {
+  try {
+    VaLidation.validate("", "");
+    
+  }
+}
