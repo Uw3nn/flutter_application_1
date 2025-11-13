@@ -1,0 +1,568 @@
+void main() {
+    print('Hello Word');
+}
+
+ belajar_dart_dasar dart run bin/hello_world.dart
+Hello World
+ belajar_dart_dasar
+
+print('Sera Anandha Valentina');
+
+print('Sera Anandha Valentina');
+
+print('Sera Anandha Valentina');
+
+print('Sera Anandha Valentina');
+
+String name;
+name = 'Sera Anandha Valentina';
+
+print(name);
+print(name);
+print(name);
+print(name);
+
+String name = 'Sera Anandha Valentina';
+
+print(name);
+print(name);
+print(name);
+print(name);
+
+var name = 'Sera Anandha Valentina';
+
+print(name);
+print(name);
+print(name);
+print(name);
+
+var firsName = 'Sera';
+final LastName = 'Valentina';
+
+firstName = 'Maria';
+LastName = 'Puspa';
+
+final array1 = [1,2,3];
+const array2 = [1,2,3];
+
+array1[0] = 5;
+array2[0] = 5;
+
+print(array1);
+print(array2);
+
+  Late var value = getValue();
+  print('Display Value');
+  print(value);
+}
+
+String getValue() {
+    print('getValue dipanggil');
+    return 'Srta Anandha Valentina';
+}
+
+/// inf ada adalah documentation
+/// yang biasanya akan digenerate menjadi dart doc
+void main() {
+  // This is variabel
+  var name = 'Sera Anandha';
+
+  /**
+  * inf adalah komentar
+  * lebih dari satu baris
+  */
+  print(name);
+}
+
+int number1 = 10
+double number = 10.5;
+
+print(number1);
+print(number2);
+
+num number = 10;
+print(number);
+
+number1 = 10.5
+print(number1);
+
+bool finish = false;
+
+print(finish);
+
+finish = true;
+
+print(finish);
+
+String firstName = 'Sera';
+
+String LastName = 'Valentina';
+
+print(firstName);
+print(LastName);
+
+String firstName = 'Sera';
+String LastName = "Valentina";
+
+var fllName = '$firstName ${LastName}';
+
+print(fullName);
+
+var text = 'this is \'dart\' \$cool';
+print(text);
+
+var name1 = firstName + LastName;
+var name2 = 'Sera' 'Anandha' 'Valentina';
+
+print(name1);
+print(name2);
+
+var LongString = '''
+string ini sangat panjang
+sehingga sulit dibuat dalam
+satu baris kode program
+''';
+
+print(LongString);
+
+dynamic variabel = 100;
+print(variabel);
+
+variabel = true;
+print(variabel);
+
+variabel = 'Sera';
+print(variabel);
+
+var inputString = '1000';
+var inputInt = int.parse(inputString);
+var inputDoule = double.parse(inputString);
+
+var doubleFromInt = inputInt.toDouble();
+var inputDoule = inputDoule.toInt();
+
+var stringFromInt = inputInt.toString();
+var stringFromDouble = inputDoule.toString();
+
+var inputString = 'true';
+var inputBool = inputString == 'true';
+
+var stringfromBool = inputBool.toString();
+
+var result1 = 10 + 10;
+var result2 = 100- 10;
+var result3 = -5;
+var result1 = 5;
+var result1 = 5 * 5;
+var result1 = 10 / 3;
+var result1 = 10 ~/ 3;
+var result1 = 10 % 3;
+
+dynamic variabel = 100;
+
+var variabel = variabel as int;
+
+var IsInt = variabel as int;
+var isNotBoolean = variabel is! bool;
+
+// Create list of int
+list<int> listInt = [];
+
+var names = <String>[];
+
+names.add('Sera');
+names.add('Anandha');
+names.add('Valentina');
+
+print(names);
+print(names.length);
+
+print(names[0]);
+names[0] = 'Sera';
+names.removeAt(2);
+print(names);
+
+Set<int> number = {};
+var names = <String>{};
+final numberDouble = <String>{};
+
+var names = <String>{};
+names.add('Sera');
+names.add('Anandha');
+names.add('Valentina');
+
+print(names);
+
+names.remove('Sera');
+print(names);
+
+Map<String, String> person = {};
+var product = Map<String, String>();
+var address = <String, String>{};
+
+print(person);
+print(product);
+print(address);
+
+var name = <String, String>{};
+name['first'] = 'Sera';
+name['middle'] = 'Anandha';
+name['Last'] = 'Valentina';
+
+print(name['first']);
+
+name['middle'] = 'Nugraha';
+print(name);
+
+name.remove('test');
+print(name);
+
+Symbol symbol1 = Symbol('Sera Anandha');
+var symbol = #belajar;
+
+print(symbol1);
+print(symbol2);
+
+var nilai = 70;
+var absen = 90;
+
+if (nilai >= 75 && absen >= 75) {
+    print('Anda lulus');
+}
+
+var nilai = 70;
+var absen = 90;
+
+if (nilai >= 75 && absen >- 75) {
+  print('Anda Lulus');
+} else {
+    print('Anda Tidak Lulus');
+}
+
+if (nilai >= 88 && absen >= 80) {
+  print('Nilai Anda A');
+} else if (nilai >= 78 && absen >= 70) {
+  print('Nilai Anda B');
+} else if (nilai >= 68 && absen >= 60) {
+  print('Nilai Anda C');
+} else if (nilai >= 58 && absen >= 50) {
+  print('Nilai Anda D');
+} else {
+  print('Nilai Anda E');
+}
+
+switch (nilai) {
+  case 'A';
+    print('Wow Anda Lulus Dengan Baik');
+    break;
+  case 'B';
+  case 'C';
+    print('Anda Lulus');
+    break;
+  case 'D';
+    print('Anda Tidak Lulus');
+    break;
+  default;
+    print('Mungkin Anda Salah Jurusan');
+}
+
+int number1;
+int? number2;
+
+print(number1); // error
+print(number2); // null
+
+var nilai = 75;
+String ucapan;
+
+ if (nilai >= 75) {
+    ucapan = 'Selamat Anda Lulus';
+ }  else {
+    ucapan = 'Cilahkan Coba Lagi';
+ }
+
+var nilai = 75;
+var ucapan = nilai >= 75 ? 'Selama Anda Lulus' : 'Silankan Coba Lagi'
+
+int? age = null;
+
+print(age.toDouble());
+
+int? age = null;
+
+if (age != null) {
+  print(age.toDouble());
+}
+
+String name = 'Sera';
+String? nullableName = name;
+
+int? nullableNumber;
+if (nullableNumber != null) {
+  int number = nullableNummber;
+}
+
+String guest;
+
+var guestName = guest ?? 'Guest';
+
+int? nullableNumber;
+var number = nullableNumber!;
+
+int? intNumber;
+double? doubleNumber = intNumber?.toDouble();
+
+print(doubleNumber);
+
+for (;;) {
+  print('Perulangan Tanpa Henti');
+}
+
+var (; counter <= 10 ;) {
+  print('Perulangan Ke-$counter');
+  counter++;
+}
+
+for (var counter = 1; counter <= 10 ;) {
+  print('Perulangan Ke-$counter');
+  counter++;
+}
+
+for (var counter = 1; counter <= 10; counter++) {
+  print(Perulangan Ke-$counter);
+}
+
+var counter = 1;
+
+while (counter <= 10) {
+  print('Perulangan Ke-$counter');
+  counter++;
+}
+
+var counter = 100;
+
+do {
+  print('Perulangan Ke-$counter');
+  counter++;
+} while (counter <= 10);
+
+var counter = 1;
+
+while (true) {
+  print('Perulangan Ke-$counter');
+  counter++;
+
+  if (counter > 10) {
+    break;
+  }
+}
+
+for (var counter = 1; counter <= 100; counter++) {
+  if (counter % 2 == 0) {
+    continue;
+  }
+  
+  print('Perulangan Ganjil-$counter');
+}
+
+var array = <String>['Sera' 'Anandha' 'Valentina'];
+
+for (var 1 = 0; i < array.length; i++) {
+  print(array[i]);
+}
+
+var array = <String>['Sera' 'Anandha' 'Valentina'];
+
+for (var value in array) {
+  print(vaalue);
+}
+
+void sayHello() {
+  print('Hello World');
+}
+
+void main() {
+  sayHello();
+  sayHello();
+}
+
+void sayHello(String firsName, String LastName) {
+  print('Hello $firstName $LastName');
+}
+
+void main(){
+  sayHello('Sera', 'Valentina');
+  sayHello('Maria', 'Puspa');
+}
+
+void sayHello(String firstName, [String? LastName]) {
+  print('Hello $firsName $LastName');
+}
+
+void main() {
+  sayHello('Sera');
+  sayHello('Sera' 'Valentina');
+}
+
+void sayHello(String firsName, [String LastName = '']) {
+  print('Hello $firstName $LastName');
+}
+
+void main() {
+  sayHello('Sera');
+  sayHello('Sera', 'Valentina');
+}
+
+void sayHello({String? firstName, String? LastName}) {
+  print('Hello $firstName $LastName');
+}
+
+void main(){
+  sayHello(firstName: 'Sera' LastName: 'Valentina');
+  sayHello(LastName: 'Puspa', firstName: 'Maria');
+  sayHello();
+  sayHello(firstName: 'Sera');
+  sayHello(LastName: 'Sera');
+}
+
+void sayHello({String firstName, String LastName = 'Default'}) {
+  print('Hello $firstName $LastName');
+}
+
+void main() {
+  sayHello(firstName: 'Sera', LastName: 'Valentina');
+  sayHello(LastName: 'Puspa', firstName: 'Maria');
+  sayHello();
+  sayHello(firstName: 'Sera');
+  sayHello(LastName: 'Sera');
+}
+
+int sum(List<int> numbers) {
+  var total = 0;
+  for (var value in numbers) {
+    total += value;
+  }
+  retur total;
+}
+
+void main() {
+  print(sum([10, 10, 10, 10, 10]));
+  print(sum([5, 5, 5, 5, 5]));
+}
+
+int sum(int first, int second) => first + second;
+
+void main() {
+  print(sum(10, 10));
+  print(sum(20, 20));
+}
+
+void main(){
+
+  void sayHello(){
+    print('Hello Inner Funcation');
+  }
+  
+  sayHello();
+  sayHello();
+}
+
+void main(List<String> arga) {
+  print('Arguments : $arga');
+}
+
+  belajar_dart_dasar dart bin/main.dart
+Arguments : []
+  belajar_dart_dasar dart bin/main.dart sera anandha valentina
+Arguments : [sera, anandha, valentina]
+  belajar_dart_dasar dart bin/main.dart "sera anandha" "maria yuliana"
+Arguments : [sera anandha, maria yuliana]
+  belajar_dart_dasar
+
+void sayHello(String name, String Funcation(String) filter) {
+  var filteredName = filter(name);
+  print('Hi $filteredName');
+}
+
+String filterBadWord(String name) {
+  if (name == 'gila') {
+    retur '****';
+  } else {
+    retur name;
+  }
+}
+
+void main(){
+  sayHello('Sera', filterBadWord);
+  sayHello('gila', filterBadWord);
+}
+
+var upperFunction = (String name) {
+  return name.toUpperCase();
+};
+
+var lowerFunction = (String name) => name.tolowerCase();
+
+print(upperFunction('Sera'));
+print(upperFunction('Sera'));
+
+void sayHello(String name, String Funcation(String) filter) {
+  var filteredName = filter(name);
+  print('Hi, $filteredName');
+}
+
+void main() {
+  sayHello('Sera Anandha Valentina', (name) {
+    retur name.toUpperCase();
+  });
+  sayHello('Sera Anandha Valentina', (String name) => name.toLowerCase());
+}
+
+void main() {
+  var name = 'Sera';
+
+  void sayHello() {
+    var hello = 'Hello $name';
+    print(hello); 
+  }
+
+  sayHello();
+  print(hello); // error tidak bisa diakses
+}
+
+void main() {
+  var counter = 0;
+  void increment() {
+    print('increment');
+    counter++;
+  }
+
+  increment();
+  increment();
+  print(counter);
+}
+
+int factorialloop(int value) {
+  var result = 1;
+  for (var i = 1; i <= value; i++) {
+    result *= i;
+  }
+  return result;
+}
+
+int factorialRecusive(int value) {
+  if (value == 1) {
+    return 1;
+  } else {
+    return value * factorialRecusive(value - 1);  
+  }
+}
+
+void loop(int value) {
+  if (value == 0) {
+    print('Selesai');
+  } else {
+    print('Loop-$value');
+    loop(value - 1);
+  }
+}
